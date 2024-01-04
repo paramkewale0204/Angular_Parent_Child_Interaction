@@ -1,4 +1,4 @@
-import { OnInit, Output } from '@angular/core';
+import { OnInit, Output, ViewChild  } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Component, Input } from '@angular/core';
 
@@ -15,11 +15,16 @@ export class ChildComponentComponent implements OnInit{
   //send data from child to parent
   @Output() public childEvent = new EventEmitter();
 
+  //viewchildexample - child to parent
+   childMessage: string = 'Hello from View Child Example!';
+
+
   constructor(){}
 
   ngOnInit(): void { 
     console.log("Hero = " + this.hero);
   }
+
 
   // On button click - Data is send from Child to Parent
   fireEvent(){
