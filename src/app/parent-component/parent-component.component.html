@@ -1,0 +1,8 @@
+<p>Parent-component works!</p>
+
+<!-- This is used to send data from Child to Parent - (childEvent)="message=$event" -->
+<!-- This is used to send data from Parent to Child - [hero]="name" -->
+<app-child-component (childEvent)="message=$event" [hero]="name"></app-child-component>
+
+<!-- Displaying message from Child to Parent -->
+<p>{{message}}</p>
